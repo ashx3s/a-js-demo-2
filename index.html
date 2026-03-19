@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Demo 2</title>
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Javascript: Conditionals, Loops, Functions, and Events</h1>
+      <p>A step-by-step demo that builds each concept on top of the last. Each example adds one new idea.</p>
+    </header>
+
+    <!-- CONDITIONALS -->
+    <section>
+      <header>
+        <h2>Conditional Rendering</h2>
+        <p>Execute specific blocks of code depending on different conditions. <a
+            href="https://www.geeksforgeeks.org/javascript/conditional-statements-in-javascript/">Geeks for Geeks
+            Article</a>.</p>
+        <p>JS has 3 main different ways that you can write conditionals:</p>
+        <ul>
+          <li>if / else / else if statements</li>
+          <li>switch statements</li>
+          <li>ternary operators (like an if/else shorthand)</li>
+        </ul>
+      </header>
+
+      <article>
+        <h3>1. if / else if / else + DOM</h3>
+        <p>Check a variable and render content based on its value.</p>
+        <div>
+          <p><strong>Time of day greeting: </strong><span id="greeting-message-field"></span></p>
+        </div>
+      </article>
+
+      <article>
+        <h3>2. Ternary Operator + DOM</h3>
+        <p>A shorthand for simple two-branch conditionals. The ternary is an expression — it produces a value we can
+          assign directly.</p>
+        <div>
+          <p><strong>Is the user logged in?</strong> <span id="login-status"></span></p>
+        </div>
+      </article>
+
+      <section>
+        <h3>When to use each? <a
+            href="https://medium.com/@gecno/choosing-between-if-else-statements-and-ternary-operators-in-javascript-ba9449953fbf">Medium
+            Article</a></h3>
+        <h4>Use if/else when:</h4>
+        <ul>
+          <li>Dealing with complex conditions with multiple branches</li>
+          <li>Needing to execute more than 1 statement</li>
+          <li>Clarity is essential</li>
+        </ul>
+        <h4>Use ternary when:</h4>
+        <ul>
+          <li>Simple conditions that require 1 line actions</li>
+          <li>Concise and clean code</li>
+        </ul>
+      </section>
+    </section>
+
+    <!-- FUNCTIONS -->
+    <section>
+      <header>
+        <h2>Functions in Javascript</h2>
+        <p>Use functions to wrap logic and make it reusable. They are great for avoiding mutations.</p>
+        <p>Javascript has 2 ways of declaring functions: traditional notation and arrow notation.</p>
+      </header>
+
+      <article>
+        <h3>Traditional Notation</h3>
+        <code>
+          function calculateSomething() {
+            // enter code here
+          }
+        </code>
+      </article>
+
+      <article>
+        <h3>Arrow Notation</h3>
+        <code>
+          const calculateSomething = () => {
+            // enter code here
+          }
+        </code>
+      </article>
+
+      <section>
+        <h3>Function Syntax Specifics</h3>
+        <ul>
+          <li><strong>The return statement</strong> is the output value of a function. It's not required but is a good
+            idea to actually return something.</li>
+          <li><strong>Function parameters</strong> are the variables that you set up in the parentheses (). These are
+            then referred to inside the function body. They make the function reusable.</li>
+          <li><strong>Function arguments</strong> are the values you pass in when you call the function. They fill in
+            the parameters.</li>
+        </ul>
+      </section>
+
+      <article>
+        <h3>3. Basic Function + DOM</h3>
+        <p>Wrap our greeting logic in a reusable function with a parameter and return value.</p>
+        <div>
+          <p><strong>Function-based greeting: </strong><span id="greeting-field"></span></p>
+        </div>
+      </article>
+    </section>
+
+    <!-- LOOPS -->
+    <section>
+      <header>
+        <h2>Loops</h2>
+        <p>Loops let us repeat an action for every item in a collection. We'll render the same list three different
+          ways to compare the syntax.</p>
+      </header>
+
+      <article>
+        <h3>4. Loops + DOM — for → for...of → forEach</h3>
+        <p>Render an array of messages into a list on the page.</p>
+        <div>
+          <p><strong>Message board:</strong></p>
+          <ul id="message-list"></ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- REFACTORED FUNCTION -->
+    <section>
+      <header>
+        <h2>Refactoring</h2>
+        <p>Once you know the basics, you can refactor code to be cleaner and more defensive.</p>
+      </header>
+
+      <article>
+        <h3>5. Object Lookup + Defensive Coding</h3>
+        <p>Refactor the if/else greeting function into an object lookup with input sanitization, default parameters,
+          and early return.</p>
+        <div>
+          <p><strong>Advanced greeting: </strong><span id="greeting-field"></span></p>
+        </div>
+      </article>
+    </section>
+
+    <!-- EVENTS CAPSTONE -->
+    <section>
+      <header>
+        <h2>Events</h2>
+        <p>Events let us respond to user interaction — clicks, keypresses, form submissions, and more.</p>
+      </header>
+
+      <article>
+        <h3>6. Event Listener + Array Cycling (Capstone)</h3>
+        <p>Pulls together arrays, functions, DOM manipulation, and the modulo operator for cycling.</p>
+        <div>
+          <p><strong>Interactive greeting: </strong><span id="greeting-field-interactive"></span></p>
+          <button id="cycle-time-button">Cycle Time of Day</button>
+        </div>
+      </article>
+    </section>
+
+  </main>
+</body>
+
+</html>
