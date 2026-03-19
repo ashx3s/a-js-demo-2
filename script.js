@@ -13,3 +13,20 @@ if (sanitizedTime(timeOfDay) === "morning") {
 } else {
   greetMsgEl.textContent = "The time of day is unknown!";
 }
+
+// 2. Ternary Operator + Dom Manipulation
+
+// login status true/false
+// let isLoggedIn = false;
+
+const user = {
+  name: "Fayne",
+  isLoggedIn: true,
+};
+// find appropriate dom element
+const loginStatusEl = document.getElementById("login-status");
+// use ternary operator in the textContent return to conditionally print a message
+
+loginStatusEl.textContent = user.isLoggedIn
+  ? `Welcome Back, ${user.name}`
+  : "Please log in to continue";
